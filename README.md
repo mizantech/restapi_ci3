@@ -1,5 +1,5 @@
-# RESTful API dengan CodeIgniter 3.1.11
-REST Server pake Codeigniter 3.1.11
+# REST API Server dengan CodeIgniter 3 + HMVC
+REST API Server pake Codeigniter 3.1.11 + HMVC
 
 
 ### Kalau *RestServer* ga jalan
