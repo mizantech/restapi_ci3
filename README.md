@@ -21,8 +21,8 @@ REST API Server pake Codeigniter 3.1.11 + HMVC
 
 ### URL yang bisa dicoba
 Asumsi: base_url = `http://localhost/`
-GET http://localhost/api/user/userlist
-GET http://localhost/api/v1/user/userlist
-POST http://localhost/api/user/test
-PUT http://localhost/api/user/users
+`GET` `http://localhost/api/user/userlist`
+`GET` `http://localhost/api/v1/user/userlist`
+`POST `http://localhost/api/user/test`
+`PUT` `http://localhost/api/user/users`
 
