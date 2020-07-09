@@ -76,7 +76,7 @@ class Another extends API_Controller {
 
 ### Mengaktifkan Autentikasi
 1. Setting database dengan benar
-1. Export file SQL: `api_tables.sql`, itu akan menghasilkan 2 tabel: `api_keys` dan `api_logs`
+1. Export file SQL: `assets/sql/api_tables.sql`, itu akan menghasilkan 2 tabel: `api_keys` dan `api_logs`
 1. Edit `config/rest.php`, set bagian ini menjadi true: `$config['rest_enable_keys'] = true;`
 1. Buat beberapa sampel entri di tabel `api_keys`, utamanya kolom `user_id` dan `api_key`
 1. Buat request GET dengan POSTMAN atau apapun, bagian header tambahkan key: `X-API-KEY` dengan value: `api_key` yang tadi dibuat di point sebelumnya
