@@ -2,6 +2,68 @@
 REST API Server pake Codeigniter 3.1.11 + HMVC
 
 
+### Membuat Controller Baru
+
+1. Jika ingin menggunakan fitur HMVC: `class ... extends MX_Controller` atau `class ... extends MY_Controller`
+1. Jika ingin murni bawaan Codeigniter saja: `class ... extends CI_Controller`
+1. Jika ingin menggunakan fungsi REST: `class ... extends ke API_Controller`
+
+
+### Tentang HMVC
+Struktur:
+```
+applications
++-- modules
+    +-- api
+    |   +-- controllers
+    |   +-- models         (jika dibutuhkan)
+    |   +-- views          (jika dibutuhkan)
+    |
+    +-- admin
+    |   +-- controllers
+    |   +-- models
+    |   +-- views
+    |
+    +-- member
+    |   +-- controllers
+    |   +-- models
+    |   +-- views
+    |
+    +-- other
+```
+
+Tips: untuk memperpendek url, gunakan routing :)
+
+
+### Contoh _Rest Controller_ yang siap pakai:
+`applications/modules/api/controllers/User.php`
+
+perhatikan:
+
+`class User extends API_Controller`
+
+`API_Controller` ada di `applications/core`
+
+`API_Controller` meng-___extends RestController___
+
+`RestController` ada di `vendor/chriskacerguis/codeigniter-restserver/src`
+
+`RestController` meng-___extends MX_Controller___
+
+
+### Membuat Controller RESTful lain
+buat saja controller baru meng-extend API_Controller, contoh:
+new file name = Another.php
+```
+<?php defined('BASEPATH') OR exit('No direct script access allowed');
+
+class Another extends API_Controller {
+  ...
+}
+// end of: Another.php
+```
+
+
 ### Kalau *RestServer* ga jalan
 1. Posisi di root folder, HAPUS (atau rename) folder "vendor"
 1. lakukan "composer update"
