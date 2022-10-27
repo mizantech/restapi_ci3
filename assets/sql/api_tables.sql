@@ -30,7 +30,7 @@ CREATE TABLE `api_keys` (
   `ignore_limits` tinyint(1) NOT NULL DEFAULT 0,
   `is_private_key` tinyint(1) NOT NULL DEFAULT 0,
   `ip_addresses` text DEFAULT NULL,
-  `date_created` date NOT NULL DEFAULT curdate(),
+  `date_created` date,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
